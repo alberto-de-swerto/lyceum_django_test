@@ -36,4 +36,4 @@ jobs:
         # stop the build if there are Python syntax errors or undefined names
         flake8 . --count --select=E741,E742,E743,E4,E8 --show-source --statistics
         black . --preview
-        flake8-quotes . --inline-quotes="
+        flake8-quotes . --inline-quotes='"'
