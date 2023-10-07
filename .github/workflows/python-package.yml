@@ -29,9 +29,11 @@ jobs:
         python -m pip install --upgrade pip
         python -m pip install flake8
         python -m pip install black
+        python -m pip install flake8-quotes
         # pip install -r requirements.txt
     - name: Lint with flake8, black
       run: |
         # stop the build if there are Python syntax errors or undefined names
-        flake8 . --count --select=E741,E742,E743,E4,E8 --show-source --statistics --inline-quotes="
+        flake8 . --count --select=E741,E742,E743,E4,E8 --show-source --statistics
         black . --preview
+        flake8-quotes . --inline-quotes "
