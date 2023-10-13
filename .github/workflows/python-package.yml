@@ -41,4 +41,5 @@ jobs:
         black . --preview
     - name: Testing da testzZ
       run: |
+        python lyceum/manage.py runserver
         python lyceum/manage.py test
